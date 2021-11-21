@@ -1,0 +1,16 @@
+query getDashboard2($urn: String!) {
+    dashboard2(urn: $urn) {
+        ...dashboard2Fields
+        editableProperties {
+            description
+        }
+        charts: relationships(input: { types: ["Contains"], direction: OUTGOING, start: 0, count: 100 }) {
+            ...fullRelationshipResults
+        }
+    }
+}
+mutation updateDashboard2($urn: String!, $input: Dashboard2UpdateInput!) {
+    updateDashboard2(urn: $urn, input: $input) {
+        urn
+    }
+}

@@ -1,0 +1,23 @@
+{
+  "type" : "record",
+  "name" : "Dashboard2Key",
+  "namespace" : "com.linkedin.metadata.key",
+  "doc" : "Key for a Dashboard2",
+  "fields" : [ {
+    "name" : "dashboard2Tool",
+    "type" : "string",
+    "doc" : "The name of the dashboard2 tool such as looker, redash etc.",
+    "Searchable" : {
+      "boostScore" : 4.0,
+      "fieldName" : "tool",
+      "fieldType" : "TEXT_PARTIAL"
+    }
+  }, {
+    "name" : "dashboard2Id",
+    "type" : "string",
+    "doc" : "Unique id for the dashboard2. This id should be globally unique for a dashboarding tool even when there are multiple deployments of it. As an example, dashboard URL could be used here for Looker such as 'looker.linkedin.com/dashboards/1234'"
+  } ],
+  "Aspect" : {
+    "name" : "dashboard2Key"
+  }
+}
